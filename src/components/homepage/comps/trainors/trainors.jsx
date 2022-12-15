@@ -3,7 +3,6 @@ import "./trainors.css"
 
 // images
 import img01 from "/homeimages/trainor01.jpg";
-import img02 from "/homeimages/smalledit03.jpg";
 import img03 from "/homeimages/trainor02.jpg";
 import img04 from "/homeimages/trainor03.jpg";
 import img05 from "/homeimages/trainor05.jpg";

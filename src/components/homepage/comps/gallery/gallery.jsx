@@ -4,7 +4,6 @@ import "./gallery.css";
 // images
 import img01 from "/homeimages/headerbg-2.jpg";
 import img05 from "/homeimages/headerbg-3.jpg";
-
 import img06 from "/homeimages/headerbg-1.jpeg";
 import img07 from "/homeimages/Gym-Equipment.jpg";
 

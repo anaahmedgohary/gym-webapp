@@ -2,7 +2,6 @@ import React from 'react';
 import "./style/footer.css";
 
 // images
-import img02 from "/homeimages/smalledit03.jpg";
 
 export default function MainFooter()
 {

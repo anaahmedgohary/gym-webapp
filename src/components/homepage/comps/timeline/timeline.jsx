@@ -2,9 +2,6 @@ import React from 'react';
 import "./timeline.css";
 
 // images
-import img01 from "/homeimages/timeline01.jpg";
-import img02 from "/homeimages/timeline02.jpg";
-import img03 from "/homeimages/femalebb-1.png";
 import img04 from "/homeimages/femalebb-16.jpg";
 import img05 from "/homeimages/timeline03.jpg";
 
