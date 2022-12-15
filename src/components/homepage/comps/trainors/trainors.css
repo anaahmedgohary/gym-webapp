@@ -9,6 +9,7 @@
   background-color: transparent;
   color: white;
   padding: 20px;
+  padding-block: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
