@@ -1,0 +1,331 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap');
+
+// colors
+$qoutecolor01: black;
+
+.Header{
+    // background-image: url(/homeimages/headerbg-3.jpg);
+    // background-image: url(/homeimages/femalebb-2.jpg);
+   // background-image: url(/homeimages/timeline02.jpg);
+    // bg01.png
+    background-image: url(/homeimages/bg01.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    border: solid rgb(0, 0, 40);
+    //background-color: rgba(250, 250, 250, 0.8);
+    background-color: rgba(0, 40, 10, 0.5);
+    background-blend-mode: multiply;
+    background-blend-mode: overlay;
+    color: white;
+
+    .navDiv{
+        display: flex;
+        align-items: center;
+        padding-inline: 20px;
+        padding-top: 10px;
+      //  border: solid;
+    }
+    .logoDiv{
+       // border: solid;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .logoimg{
+        border: black solid;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+    h1{
+        font-family: 'Rubik 80s Fade', cursive;
+        font-size: 30px;
+    }
+
+    #mainNav{
+       // border: solid;
+        flex-grow: 1;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        .nav-list{
+            @include flexCenter();
+            gap: 15px;
+            height: 100%;
+        }
+        .nav-list{
+            height: 100%;
+            margin-block: auto;
+        }
+        .nav-list-item{
+            //border: solid;
+            height: 100%;
+           //@debug display: flex;
+        }
+        .nav-list-link{
+            height: 100%;
+            @include flexCenter();
+            text-decoration: none;
+           // color: black;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            font-family: 'Port Lligat Slab', serif;
+            //border: solid;
+            transition: 500ms;
+            &:hover{
+               // background-color: darkolivegreen;
+                color: rgba(0, 100, 40, 1);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .burger-menu-div{
+      display: none;
+    }
+
+       
+}
+
+#mainBarMenu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    height: 90%;
+    @include gridCenter();
+    background-color:black;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: white solid;
+    border-radius: 4px;
+    padding-inline: 50px;
+    text-align: center;
+    z-index: 9;
+
+.bar-list-link{
+    color: white;
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    min-width: 250px;
+    max-width: 300px;
+  // line-height: 80px;
+   //border: solid;
+    transition: 500ms;
+    &:hover{
+        color: rgba(180, 40, 40, 1);
+       
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.qoutesDiv{
+   // border: solid;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    translate:  -50% -50%;
+    padding-inline: 100px;
+    width: 100%;
+    @include flexCenterWrap();
+   // align-items: flex-start;
+  //  justify-content: space-evenly;
+    gap: 20px;
+    
+
+    .firstqoute{
+        flex-grow: 1;
+       // border: gold solid;
+       // width: 50%;
+       //border: solid red;
+       @include gridCenter();
+        .qouteP{
+            max-width: 340px;
+            font-size: 50px;
+            font-family: 'Alegreya SC', serif;
+            text-align: center;
+           // color: rgb(20, 60, 20);
+           // color: $qoutecolor01;
+            color: white;
+        }
+    }
+
+    .joinbtn-div{
+        .joinbtn{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and(max-width:1150px) {
+
+    .qoutesDiv{
+        display: grid;
+        place-items: center;
+        justify-content: center;
+       // border: solid;
+
+        .firstqoute{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and(max-width:900px) {
+    .Header{
+        #mainNav{
+            display: none;
+        }
+
+        .burger-menu-div{
+        display: block;
+      //  justify-content: end;
+     // position: relative;
+
+        .burger-menu{
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            border: solid white;
+            display: flex;
+            font-size: 20px;
+            padding-inline: 5px;
+            padding-block: 4px;
+            border-radius: 12px;
+            background-color: rgba(40, 40, 40, 1);
+            color: white;
+            z-index: 10;
+            &:hover{
+                color: rgb(2, 77, 2);
+            }
+        }
+    } 
+    }
+
+    .qoutesDiv{
+       // border: solid;
+        padding-inline: 20px;
+        @include gridCenter();
+        justify-content: center;
+
+        .firstqoute{
+           // border: solid;
+            width: 100%;
+            max-width: unset;
+           // margin-inline: auto;
+            .qouteP{
+                font-size: 50px;
+            }
+        }
+         .joinbtn-div{
+        .joinbtn{
+            font-size: 30px;
+        }
+    }
+    }
+
+}
+
+@media screen and(max-width:600px) {
+
+
+    .Header{
+        background-position: left;
+        // femalebb-3.jpg
+        background-image: url(/homeimages/femalebb-3.jpg);
+    }
+}
+
+@media screen and(max-width:500px) {
+
+
+    .Header{
+        background-position: left;
+        // femalebb-3.jpg
+        // background-image: url(/homeimages/femalebb-3.jpg);
+        // 002bg.png
+        background-image: url(/homeimages/002bg.png);
+    }
+
+    .qoutesDiv{
+        padding-inline: 4px;
+
+        .firstqoute{
+            .qouteP{
+                font-size: 46px;
+            }
+        }
+         .joinbtn-div{
+        .joinbtn{
+            font-size: 30px;
+        }
+    }
+    }
+
+}
+
+
+@media screen and(max-width:350px) {
+
+
+    .Header{
+        background-position: left;
+
+        h1{
+            min-width: unset;
+        }
+    }
+
+    .qoutesDiv{
+        padding-inline: 2px;
+
+        .firstqoute{
+            .qouteP{
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+

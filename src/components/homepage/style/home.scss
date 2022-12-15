@@ -1,0 +1,25 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+.homediv {
+    background-color: black;
+    background-color: rgba(0, 40, 40, 0.9);
+}
+
+
+
+

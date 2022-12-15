@@ -1,0 +1,192 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+.timeLine {
+    background-color: rgba(0, 40, 40, 0.9);
+    // display: grid;
+    // gap: 10px;
+}
+
+.timelineDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(0, 40, 40, 0.9);
+    color: wheat;
+    overflow: hidden;
+    
+    
+
+    .timelineImg {
+        width: 100%;
+        object-fit: fill;
+    }
+    .timelinePs {
+        @include flexCenter();
+        @include gridCenter();
+        padding-inline: 20px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .secondp {
+        //height: 100%;
+        font-size: 40px;
+    }
+
+    .aboutgymp {
+        position: relative;
+        border: solid;
+        width: 300px;
+        margin-inline: auto;
+        font-size: 20px;
+
+        &:before {
+            content: "";
+            height: 2px;
+            position: absolute;
+            right: 80%;
+            left: 5%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: wheat;
+            // color: green;
+        }
+        &:after {
+            content: "";
+            height: 2px;
+            position: absolute;
+            right: 5%;
+            left: 80%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: wheat;
+            // color: green;
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .timelineDiv {
+       // display: grid;
+
+        
+       
+
+        .secondp{
+            font-size: 35px;
+        }
+
+        .aboutgymp{
+            width: 290px;
+        }
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .timelineDiv {
+       // display: grid;
+
+        
+       
+
+        .secondp{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .timelineDiv {
+       // display: grid;
+
+        .secondp{
+            font-size: 24px;
+        }
+
+        .aboutgymp{
+            width: 290px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .timelineDiv {
+       // display: grid;
+
+        .secondp{
+            font-size: 22px;
+        }
+
+        .aboutgymp{
+            width: 290px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .timelineDiv {
+       // display: grid;
+
+        .secondp{
+            font-size: 20px;
+        }
+
+        .aboutgymp{
+            width: 290px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timelineDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        position: relative;
+       // border: solid red;
+       padding-top: 20px;
+
+        .timelinePs{
+            grid-row: 1 / 3;
+            border: none;
+        }
+        .imgToBg{
+            grid-row: 1 / 3;
+            position: absolute;
+            width: 100%;
+            object-fit: fill;
+            object-position: center -150px;
+            opacity: 0.1;
+            border: none;
+            pointer-events: none;
+        }
+        .secondp{
+            font-size: 20px;
+        }
+
+        .aboutgymp{
+            width: 290px;
+        }
+    }
+}

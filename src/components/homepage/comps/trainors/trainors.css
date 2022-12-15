@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.trainorcontainer {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.trainorsGall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trainorDiv {
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+.trainorDiv .title {
+  text-decoration: none;
+  margin: 0;
+}
+.trainorDiv .name {
+  text-decoration: none;
+  margin: 0;
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 6, 6);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+.trainorDiv .trainorImg {
+  text-decoration: none;
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+.trainorDiv .workHours {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.trainorDiv .workHours a {
+  width: 100%;
+}/*# sourceMappingURL=trainors.css.map */
