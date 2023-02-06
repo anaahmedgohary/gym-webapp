@@ -7,6 +7,7 @@ import './AppStyle/App.css';
 import MainHeader from './components/mainheader/header';
 import HomePage from './components/homepage/home';
 import MainFooter from './components/mainfooter/footer';
+import LogIn from './components/login/login';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <MainHeader />
       <Routes>
         {/* <Route path='/contact' element={<HomePage/>} /> */}
-        <Route path='/' element={<HomePage/>} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/login' element={<LogIn />} />
+
       </Routes>
       <MainFooter />
     </Router>
