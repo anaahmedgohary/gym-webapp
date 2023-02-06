@@ -70,6 +70,7 @@
   -o-object-fit: fill;
      object-fit: fill;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .imgsGallery {

@@ -34,9 +34,16 @@ export default function GalleryComp()
   return (
     <div>
 
-      <div className='galImgModal' id='GallModal'>
-        <div className='fixed-div' onClick={(event) => { document.getElementById("GallModal").style.display = "none"}}>
-          <img id='modalImg' className='modal-Img' src={img02} alt="" />
+      <div className='galImgModal' id='GallModal' style={{display:"none"}}>
+        <div className='fixed-div' onClick={(event) =>
+        {
+          if (event.target != document.getElementById("modalImg"))
+          {
+            document.getElementById("GallModal").style.display = "none"
+          }
+          
+        }}>
+          <img id='modalImg' className='modal-Img' src={img02} alt="machines" />
           <button className='btn btn-danger closebtn'>Exit</button>
         </div>
       </div>
