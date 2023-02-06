@@ -13,14 +13,15 @@ import "./style/signin.css";
 
 
 
-let baseURL = import.meta.env.VITE_BASE_URL || process.env.VITE_BASE_URL;
+// let baseURL = import.meta.env.VITE_BASE_URL || process.env.VITE_BASE_URL;
+let baseURL = "/api"
 //console.log(baseURL)
 
 export default function LogIn(props)
 {
     useEffect(() =>
     {
-        axios(`${baseURL}/checkauth`, {
+        axios(`${baseURL}/loginnn`, {
             method: 'GET',
             withCredentials: true
         })
