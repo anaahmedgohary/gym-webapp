@@ -2,11 +2,9 @@
   "name": "gym-app",
   "version": "1.0.0",
   "description": "",
-  "main": "gym-app_back/index.js",
+  "main": "gym-app_front",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node gym-app_back/index.js",
-    "build": "cd gym-app_front && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

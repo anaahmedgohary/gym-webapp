@@ -22,6 +22,11 @@ app.get("/api", (req, res) =>
     res.json({ "well": "done" })
 });
 
+app.get("/api/login", (req, res) =>
+{
+    res.redirect("https://gymwebapp1.vercel.app/login")
+});
+
 
 
 
