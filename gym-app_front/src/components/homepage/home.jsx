@@ -5,11 +5,13 @@ import "./style/home.css";
 import TimelineComp from './comps/timeline/timeline';
 import GalleryComp from './comps/gallery/gallery';
 import TrainorsComp from './comps/trainors/trainors';
+import HomeHeader from './comps/header/header';
 
 export default function HomePage() {
   return (
     <div className='homediv'>
       
+      <HomeHeader />
       <TimelineComp />
       {/* <div className='timeLine'>
         

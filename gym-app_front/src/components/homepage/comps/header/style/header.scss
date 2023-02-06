@@ -24,17 +24,29 @@
 // colors
 $qoutecolor01: black;
 
-.MainHeader{
-    background-color: rgba(40, 40, 40, 1);
+.Header{
+    // background-image: url(/homeimages/headerbg-3.jpg);
+    // background-image: url(/homeimages/femalebb-2.jpg);
+   // background-image: url(/homeimages/timeline02.jpg);
+    // bg01.png
+    background-image: url(/homeimages/bg01.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    border: solid rgb(0, 0, 40);
+    //background-color: rgba(250, 250, 250, 0.8);
+    background-color: rgba(0, 40, 10, 0.5);
+    background-blend-mode: multiply;
+    background-blend-mode: overlay;
     color: white;
-    padding-bottom: 10px;
 
     .navDiv{
         display: flex;
         align-items: center;
         padding-inline: 20px;
         padding-top: 10px;
-        justify-content: space-between;
       //  border: solid;
     }
     .logoDiv{
@@ -201,23 +213,20 @@ $qoutecolor01: black;
 }
 
 @media screen and(max-width:900px) {
-    .MainHeader{
+    .Header{
         #mainNav{
             display: none;
         }
 
         .burger-menu-div{
-        display: flex;
+        display: block;
       //  justify-content: end;
-    //  position: relative;
-    //  border: solid red;
-    //  width: 200px;
-     height: 60px;
+     // position: relative;
 
         .burger-menu{
             position: absolute;
             right: 5%;
-            // top: 5%;
+            top: 5%;
             border: solid white;
             display: flex;
             font-size: 20px;
@@ -261,7 +270,7 @@ $qoutecolor01: black;
 @media screen and(max-width:600px) {
 
 
-    .MainHeader{
+    .Header{
         background-position: left;
         // femalebb-3.jpg
         background-image: url(/homeimages/femalebb-3.jpg);
@@ -271,7 +280,7 @@ $qoutecolor01: black;
 @media screen and(max-width:500px) {
 
 
-    .MainHeader{
+    .Header{
         background-position: left;
         // femalebb-3.jpg
         // background-image: url(/homeimages/femalebb-3.jpg);
@@ -300,7 +309,7 @@ $qoutecolor01: black;
 @media screen and(max-width:350px) {
 
 
-    .MainHeader{
+    .Header{
         background-position: left;
 
         h1{

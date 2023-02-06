@@ -2,53 +2,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap");
-.MainHeader {
-  background-color: rgb(40, 40, 40);
+.Header {
+  background-image: url(/homeimages/bg01.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  border: solid rgb(0, 0, 40);
+  background-color: rgba(0, 40, 10, 0.5);
+  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   color: white;
-  padding-bottom: 10px;
 }
-.MainHeader .navDiv {
+.Header .navDiv {
   display: flex;
   align-items: center;
   padding-inline: 20px;
   padding-top: 10px;
-  justify-content: space-between;
 }
-.MainHeader .logoDiv {
+.Header .logoDiv {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.MainHeader .logoimg {
+.Header .logoimg {
   border: black solid;
   border-radius: 50%;
   width: 80px;
   height: 80px;
 }
-.MainHeader h1 {
+.Header h1 {
   font-family: "Rubik 80s Fade", cursive;
   font-size: 30px;
 }
-.MainHeader #mainNav {
+.Header #mainNav {
   display: flex;
   align-items: center;
   height: 100%;
 }
-.MainHeader #mainNav .nav-list {
+.Header #mainNav .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   height: 100%;
 }
-.MainHeader #mainNav .nav-list {
+.Header #mainNav .nav-list {
   height: 100%;
   margin-block: auto;
 }
-.MainHeader #mainNav .nav-list-item {
+.Header #mainNav .nav-list-item {
   height: 100%;
 }
-.MainHeader #mainNav .nav-list-link {
+.Header #mainNav .nav-list-link {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -60,11 +67,11 @@
   font-family: "Port Lligat Slab", serif;
   transition: 500ms;
 }
-.MainHeader #mainNav .nav-list-link:hover {
+.Header #mainNav .nav-list-link:hover {
   color: rgb(0, 100, 40);
   text-decoration: underline;
 }
-.MainHeader .burger-menu-div {
+.Header .burger-menu-div {
   display: none;
 }
 
@@ -136,16 +143,16 @@
   }
 }
 @media screen and (max-width: 900px) {
-  .MainHeader #mainNav {
+  .Header #mainNav {
     display: none;
   }
-  .MainHeader .burger-menu-div {
-    display: flex;
-    height: 60px;
+  .Header .burger-menu-div {
+    display: block;
   }
-  .MainHeader .burger-menu-div .burger-menu {
+  .Header .burger-menu-div .burger-menu {
     position: absolute;
     right: 5%;
+    top: 5%;
     border: solid white;
     display: flex;
     font-size: 20px;
@@ -156,7 +163,7 @@
     color: white;
     z-index: 10;
   }
-  .MainHeader .burger-menu-div .burger-menu:hover {
+  .Header .burger-menu-div .burger-menu:hover {
     color: rgb(2, 77, 2);
   }
   .qoutesDiv {
@@ -177,13 +184,13 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .MainHeader {
+  .Header {
     background-position: left;
     background-image: url(/homeimages/femalebb-3.jpg);
   }
 }
 @media screen and (max-width: 500px) {
-  .MainHeader {
+  .Header {
     background-position: left;
     background-image: url(/homeimages/002bg.png);
   }
@@ -198,10 +205,10 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .MainHeader {
+  .Header {
     background-position: left;
   }
-  .MainHeader h1 {
+  .Header h1 {
     min-width: unset;
   }
   .qoutesDiv {
