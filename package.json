@@ -1,0 +1,21 @@
+{
+  "name": "gym-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gym-app_back/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node gym-app_back/index.js",
+    "build": "cd gym-app_front && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaahmedgohary/gym-webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anaahmedgohary/gym-webapp/issues"
+  },
+  "homepage": "https://github.com/anaahmedgohary/gym-webapp#readme"
+}
