@@ -16,6 +16,7 @@ build
 build/
 dist
 dist/
+ignores/
 
 
 # Editor directories and files
