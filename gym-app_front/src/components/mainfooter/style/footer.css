@@ -1,5 +1,6 @@
 .fullwidthblock {
-  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
   min-height: 50vh;
   background-image: url(/homeimages/timeline02.jpg);
   background-image: url(/homeimages/smalledit03.jpg);
@@ -11,7 +12,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
 }
 .fullwidthblock .fwImg {
   width: 100%;
@@ -19,22 +19,58 @@
 
 .colscontainer {
   color: white;
-  width: 100%;
   margin: auto;
-  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 100px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  width: 100%;
+  padding-bottom: 50px;
 }
-.colscontainer .header {
+.colscontainer .footerCol {
+  min-width: 250px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.colscontainer .footerCol .colListDiv {
+  flex-grow: 1;
+  display: flex;
+}
+.colscontainer .title {
   font-size: 30px;
   font-weight: 600;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline;
+  line-height: 80px;
 }
 .colscontainer .colList {
-  display: grid;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .colscontainer .colList li {
   font-size: 20px;
+  flex-grow: 1;
+}
+.colscontainer .socialLinks li {
+  opacity: 0.8;
+  transition: 300ms;
+}
+.colscontainer .socialLinks li:hover {
+  opacity: 1;
+  scale: 1.05;
+  color: skyblue;
+}
+.colscontainer .socialLinks li:hover a {
+  transition: 300ms;
+  color: skyblue;
 }
 
 .aboutUs a {

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap");
-.Header {
+.headSection {
   background-image: url(/homeimages/bg01.png);
   background-position: center top;
   background-repeat: no-repeat;
@@ -14,93 +14,6 @@
   background-blend-mode: multiply;
   background-blend-mode: overlay;
   color: white;
-}
-.Header .navDiv {
-  display: flex;
-  align-items: center;
-  padding-inline: 20px;
-  padding-top: 10px;
-}
-.Header .logoDiv {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.Header .logoimg {
-  border: black solid;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-}
-.Header h1 {
-  font-family: "Rubik 80s Fade", cursive;
-  font-size: 30px;
-}
-.Header #mainNav {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.Header #mainNav .nav-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  height: 100%;
-}
-.Header #mainNav .nav-list {
-  height: 100%;
-  margin-block: auto;
-}
-.Header #mainNav .nav-list-item {
-  height: 100%;
-}
-.Header #mainNav .nav-list-link {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-weight: 700;
-  font-family: "Port Lligat Slab", serif;
-  transition: 500ms;
-}
-.Header #mainNav .nav-list-link:hover {
-  color: rgb(0, 100, 40);
-  text-decoration: underline;
-}
-.Header .burger-menu-div {
-  display: none;
-}
-
-#mainBarMenu {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  height: 90%;
-  display: grid;
-  place-items: center;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: white solid;
-  border-radius: 4px;
-  padding-inline: 50px;
-  text-align: center;
-  z-index: 9;
-}
-#mainBarMenu .bar-list-link {
-  color: white;
-  font-size: 40px;
-  font-family: "Anton", sans-serif;
-  min-width: 250px;
-  max-width: 300px;
-  transition: 500ms;
-}
-#mainBarMenu .bar-list-link:hover {
-  color: rgb(180, 40, 40);
 }
 
 .qoutesDiv {
@@ -143,29 +56,6 @@
   }
 }
 @media screen and (max-width: 900px) {
-  .Header #mainNav {
-    display: none;
-  }
-  .Header .burger-menu-div {
-    display: block;
-  }
-  .Header .burger-menu-div .burger-menu {
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    border: solid white;
-    display: flex;
-    font-size: 20px;
-    padding-inline: 5px;
-    padding-block: 4px;
-    border-radius: 12px;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    z-index: 10;
-  }
-  .Header .burger-menu-div .burger-menu:hover {
-    color: rgb(2, 77, 2);
-  }
   .qoutesDiv {
     padding-inline: 20px;
     display: grid;
@@ -184,13 +74,13 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .Header {
+  .headSection {
     background-position: left;
     background-image: url(/homeimages/femalebb-3.jpg);
   }
 }
 @media screen and (max-width: 500px) {
-  .Header {
+  .headSection {
     background-position: left;
     background-image: url(/homeimages/002bg.png);
   }
@@ -205,10 +95,10 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .Header {
+  .headSection {
     background-position: left;
   }
-  .Header h1 {
+  .headSection h1 {
     min-width: unset;
   }
   .qoutesDiv {

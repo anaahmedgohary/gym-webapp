@@ -3,9 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap");
 .MainHeader {
-  background-color: rgb(40, 40, 40);
+  background: transparent;
+  background-color: transparent;
   color: white;
   padding-bottom: 10px;
+  position: absolute;
+  width: 100%;
 }
 .MainHeader .navDiv {
   display: flex;
@@ -68,34 +71,135 @@
   display: none;
 }
 
-#mainBarMenu {
-  position: absolute;
-  left: 50%;
+.BarMenuDiv {
+  position: fixed;
   top: 50%;
-  translate: -50% -50%;
-  height: 90%;
-  display: grid;
-  place-items: center;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: white solid;
-  border-radius: 4px;
-  padding-inline: 50px;
+  translate: 0% -50%;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   text-align: center;
   z-index: 9;
+  transition: 600ms;
 }
-#mainBarMenu .bar-list-link {
+.BarMenuDiv .bar-list {
+  position: absolute;
+  left: 100%;
+  border: white solid;
+  background-color: black;
+  min-width: 300px;
+  max-width: 450px;
+  height: 96%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 600ms;
+}
+.BarMenuDiv .bar-list-link {
+  background-color: black;
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   font-family: "Anton", sans-serif;
   min-width: 250px;
   max-width: 300px;
   transition: 500ms;
 }
-#mainBarMenu .bar-list-link:hover {
+.BarMenuDiv .bar-list-link:hover {
   color: rgb(180, 40, 40);
 }
 
+.faderBlck {
+  -webkit-animation: fadeBlack 600ms ease-in-out 0ms 1 alternate forwards;
+          animation: fadeBlack 600ms ease-in-out 0ms 1 alternate forwards;
+}
+
+.faderout {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: fadeOut 600ms ease-in-out 0ms 1 alternate forwards;
+          animation: fadeOut 600ms ease-in-out 0ms 1 alternate forwards;
+}
+
+@-webkit-keyframes fadeBlack {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes fadeBlack {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    left: 100%;
+    background-color: transparent;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    left: 100%;
+    background-color: transparent;
+  }
+}
+.SlideLeft {
+  transition: 600ms;
+  -webkit-animation: SlideL 400ms ease-in-out 0ms 1 alternate forwards;
+          animation: SlideL 400ms ease-in-out 0ms 1 alternate forwards;
+}
+
+.slideRight {
+  transition: 600ms;
+  -webkit-animation: SlideR 400ms ease-in-out 0ms 1 normal forwards;
+          animation: SlideR 400ms ease-in-out 0ms 1 normal forwards;
+}
+
+@-webkit-keyframes SlideL {
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes SlideL {
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes SlideR {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes SlideR {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 100%;
+  }
+}
 .qoutesDiv {
   position: absolute;
   top: 60%;
@@ -176,17 +280,7 @@
     font-size: 30px;
   }
 }
-@media screen and (max-width: 600px) {
-  .MainHeader {
-    background-position: left;
-    background-image: url(/homeimages/femalebb-3.jpg);
-  }
-}
 @media screen and (max-width: 500px) {
-  .MainHeader {
-    background-position: left;
-    background-image: url(/homeimages/002bg.png);
-  }
   .qoutesDiv {
     padding-inline: 4px;
   }
@@ -198,9 +292,6 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .MainHeader {
-    background-position: left;
-  }
   .MainHeader h1 {
     min-width: unset;
   }

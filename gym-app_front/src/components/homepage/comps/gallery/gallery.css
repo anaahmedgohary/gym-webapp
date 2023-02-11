@@ -8,7 +8,6 @@
   flex-direction: column;
   gap: 20px;
   background-color: rgba(0, 40, 40, 0.9);
-  padding-inline: 20px;
 }
 
 .galImgModal {
@@ -34,24 +33,61 @@
   left: 50%;
   translate: -50% -50%;
 }
+.galImgModal .mNext_btn {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  translate: -50% -50%;
+  color: gray;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 50%;
+}
+.galImgModal .mPrev_btn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  translate: -50% -50%;
+  color: gray;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 50%;
+}
 .galImgModal .closebtn {
-  width: 100px;
-  height: 50px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 30px;
+  background-color: orangered;
+  color: white;
+  border: solid black;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
   position: absolute;
   top: 10%;
   right: 10%;
   translate: -10% -10%;
 }
+.galImgModal .closebtn:hover {
+  box-shadow: 2px 2px 4px 2px black;
+  background-color: rgb(248, 102, 49);
+}
 
 .trainorsGallery {
-  display: grid;
-  place-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr 60%;
-  grid-template-rows: 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 40px;
   width: 100%;
-  overflow: hidden;
   min-height: 950px;
 }
 
@@ -61,15 +97,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  position: relative;
+}
+.trainorP .nextfa_Btn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  translate: -50% -50%;
+  color: gray;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 50%;
+}
+.trainorP .prevfa_Btn {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  translate: -50% -50%;
+  color: gray;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 50%;
+}
+
+.sideImgDiv {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sideImg {
-  width: 100%;
+  max-width: 94%;
+  height: 100%;
   border: solid rgb(236, 114, 57);
-  -o-object-fit: fill;
-     object-fit: fill;
-  overflow: hidden;
   cursor: pointer;
 }
 
@@ -86,7 +156,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
   overflow: hidden;
 }
@@ -105,8 +175,5 @@
     flex-direction: column;
     gap: 50px;
     padding-block: 50px;
-  }
-  .sideImg {
-    height: 400px;
   }
 }/*# sourceMappingURL=gallery.css.map */

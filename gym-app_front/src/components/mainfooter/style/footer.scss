@@ -17,7 +17,8 @@
 
 
 .fullwidthblock {
-    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
     min-height: 50vh;
     background-image: url(/homeimages/timeline02.jpg);
     background-image: url(/homeimages/smalledit03.jpg);
@@ -27,7 +28,6 @@
     background-blend-mode: overlay;
     @include flexCenter();
     flex-direction: column;
-    padding: 50px;
 
     .fwImg {
         width: 100%;
@@ -36,23 +36,65 @@
 
 .colscontainer{
     color: white;
-    width: 100%;
     margin: auto;
-    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 100px;
+    column-gap: 40px;
+    width: 100%;
+    padding-bottom: 50px;
 
-    .header{
+
+    .footerCol{
+        min-width: 250px;
+        // border: solid;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+
+        .colListDiv{
+            // border: solid blue;
+            flex-grow: 1;
+            display: flex;
+        }
+    }
+    .title{
         font-size: 30px;
         font-weight: 600;
         font-style: italic;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: underline;
+        line-height: 80px;
     }
 
     .colList{
-
-        display: grid;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
+        // border: solid red;
         li{
             font-size: 20px;
+            flex-grow: 1;
+        }
+    }
+    .socialLinks{
+        li{
+            opacity: 0.8;
+            transition: 300ms;
+            &:hover{
+                opacity: 1;
+                scale: 1.05;
+                color: skyblue;
+                a{
+                    transition: 300ms;
+                    color: skyblue;
+                }
+            }
         }
     }
 }

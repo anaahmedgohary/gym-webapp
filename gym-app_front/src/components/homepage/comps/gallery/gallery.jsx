@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./gallery.css";
 
 // images
@@ -11,23 +11,45 @@ import img06 from "/homeimages/headerbg-1.jpeg";
 import img07 from "/homeimages/Gym-Equipment.jpg";
 import img08 from "/homeimages/machine07.jpg";
 import img09 from "/homeimages/machine10.jpg";
+import imagesData from "./imagesData.js";
 
 export default function GalleryComp()
 {
+  const ImagesArr = document.querySelectorAll(".GalleryImg");
+  // console.log(ImagesArr[0])
 
-  const chooseImg = (e) =>
+
+  const [currImg, setcurrImg] = useState(imagesData[0]);
+  // console.log(currImg)
+
+
+  const nextImg = (e) =>
   {
-    let clicked = e.target;
-    let mainImg = document.getElementById("mainImg");
-    mainImg.src = clicked.src
-
+    imagesData.forEach((item, index) =>
+    {
+      if (currImg == item)
+      {
+        imagesData[index + 1] ? setcurrImg(imagesData[index + 1])
+          : setcurrImg(imagesData[0]);
+        return
+      }
+    })
   }
+  const prevImg = () =>
+  {
+    imagesData.forEach((item, index) =>
+    {
+      if (currImg == item)
+      {
+        imagesData[index - 1] ? setcurrImg(imagesData[index - 1])
+          : setcurrImg(imagesData[imagesData.length - 1]);
+        return
+      }
+    })
+  }
+
   const showModal = (e) =>
   {
-    let mainImg = document.getElementById("mainImg");
-    let modalImg = document.getElementById("modalImg");
-    let GallModal = document.getElementById("GallModal");
-    modalImg.src = mainImg.src
     GallModal.style.display = "block"
   }
 
@@ -37,14 +59,21 @@ export default function GalleryComp()
       <div className='galImgModal' id='GallModal' style={{display:"none"}}>
         <div className='fixed-div' onClick={(event) =>
         {
-          if (event.target != document.getElementById("modalImg"))
+          // if (event.target != document.getElementById("modalImg"))
+          if (event.target == document.querySelector(".fixed-div") || event.target == document.querySelector(".closebtn"))
           {
             document.getElementById("GallModal").style.display = "none"
           }
           
         }}>
-          <img id='modalImg' className='modal-Img' src={img02} alt="machines" />
-          <button className='btn btn-danger closebtn'>Exit</button>
+          <button onClick={prevImg}>
+            <i className="fa-solid fa-chevron-left fa-3x mNext_btn"></i>
+          </button>
+          <img id='modalImg' className='modal-Img' src={currImg} alt="machines" />
+          <button onClick={nextImg}>
+            <i className="fa-solid fa-chevron-right fa-3x mPrev_btn"></i>
+          </button>
+          <button className='closebtn'>X</button>
         </div>
       </div>
     
@@ -55,11 +84,21 @@ export default function GalleryComp()
       </div>
 
       <div className='trainorsGallery'>
-        <div className='trainorP'>
-          <img id='mainImg' className='sideImg' src={img01} alt="" onClick={showModal} />
+          <div className='trainorP'>
+            <button onClick={prevImg}>
+              <i className="fa-solid fa-chevron-left fa-3x prevfa_Btn"></i>
+            </button>
+
+            <div className='sideImgDiv'>
+              <img id='mainImg' className='sideImg' src={currImg} alt="clicked" onClick={showModal} />
+            </div>
+
+            <button onClick={nextImg}>
+              <i className="fa-solid fa-chevron-right fa-3x nextfa_Btn"></i>
+            </button>
         </div>
 
-        <div className='imgsGallery'>
+          {/* <div className='imgsGallery'>
 
           <div className='imgcol'>
             <img className='GalleryImg' src={img01} alt="firstpic" onClick={chooseImg} />
@@ -76,7 +115,24 @@ export default function GalleryComp()
             <img className='GalleryImg' src={img08} alt="firstpic" onClick={chooseImg} />
             <img className='GalleryImg' src={img09} alt="firstpic" onClick={chooseImg} />
           </div>
-        </div>
+          </div> */}
+
+          <div className='imgsGallery'>
+
+            <div className='imgcol'>
+              {imagesData.map((item, index) =>
+              {
+                return (
+                  <img className='GalleryImg' id={index} src={item} alt="firstpic" key={index} onClick={(e) =>
+                  {
+                    setcurrImg(imagesData[e.target.id]);
+                  }} />
+                )
+              })}
+            </div>
+
+          </div>
+
       </div>
 
       </div>
