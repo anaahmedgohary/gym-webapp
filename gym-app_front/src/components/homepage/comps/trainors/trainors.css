@@ -8,13 +8,17 @@
   width: 100%;
   background-color: transparent;
   color: white;
-  padding: 20px;
   padding-block: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 50px;
+}
+.trainorcontainer h1 {
+  text-align: center;
+  font-size: 40px;
+  background-color: black;
 }
 
 .trainorsGall {

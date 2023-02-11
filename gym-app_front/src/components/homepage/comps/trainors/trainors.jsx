@@ -14,7 +14,7 @@ export default function TrainorsComp() {
           
           <div className='trainorcontainer'>
               
-              <div>
+              <div className='w-full'>
                   <h1>TRAINORS</h1>
               </div>
 

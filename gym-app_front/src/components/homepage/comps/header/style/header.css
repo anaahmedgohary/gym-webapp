@@ -14,35 +14,45 @@
   background-blend-mode: multiply;
   background-blend-mode: overlay;
   color: white;
+  overflow: hidden;
 }
 
 .qoutesDiv {
   position: absolute;
-  top: 60%;
+  bottom: 0;
   left: 50%;
-  translate: -50% -50%;
+  translate: -50% 0%;
   padding-inline: 100px;
   width: 100%;
+  height: 86%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .qoutesDiv .firstqoute {
-  flex-grow: 1;
+  overflow: hidden;
   display: grid;
   place-items: center;
 }
 .qoutesDiv .firstqoute .qouteP {
   max-width: 340px;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Alegreya SC", serif;
   text-align: center;
   color: white;
 }
 .qoutesDiv .joinbtn-div .joinbtn {
   font-size: 30px;
+  background-color: green;
+  padding-inline: 20px;
+  line-height: 80px;
+  border-radius: 4px;
+  transition: 400ms;
+}
+.qoutesDiv .joinbtn-div .joinbtn:hover {
+  box-shadow: 3px 3px 4px 1px wheat;
+  background-color: rgb(24, 155, 24);
 }
 
 @media screen and (max-width: 1150px) {
@@ -67,7 +77,7 @@
     max-width: unset;
   }
   .qoutesDiv .firstqoute .qouteP {
-    font-size: 50px;
+    font-size: 40px;
   }
   .qoutesDiv .joinbtn-div .joinbtn {
     font-size: 30px;
@@ -88,7 +98,7 @@
     padding-inline: 4px;
   }
   .qoutesDiv .firstqoute .qouteP {
-    font-size: 46px;
+    font-size: 36px;
   }
   .qoutesDiv .joinbtn-div .joinbtn {
     font-size: 30px;
@@ -105,6 +115,6 @@
     padding-inline: 2px;
   }
   .qoutesDiv .firstqoute .qouteP {
-    font-size: 40px;
+    font-size: 30px;
   }
 }/*# sourceMappingURL=header.css.map */

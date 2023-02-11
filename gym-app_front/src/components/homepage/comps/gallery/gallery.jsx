@@ -79,8 +79,8 @@ export default function GalleryComp()
     
     <div className='mainDiv'>
 
-      <div>
-        <h1 className='text-center'>MACHINES & EQUIPMENT</h1>
+      <div className='w-full'>
+          <h1 className='text-center text-[30px]'>MACHINES & EQUIPMENT</h1>
       </div>
 
       <div className='trainorsGallery'>

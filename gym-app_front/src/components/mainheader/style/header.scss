@@ -201,55 +201,6 @@ $qoutecolor01: black;
     }
 }
 
-.qoutesDiv {
-    // border: solid;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    translate: -50% -50%;
-    padding-inline: 100px;
-    width: 100%;
-    @include flexCenterWrap();
-    // align-items: flex-start;
-    //  justify-content: space-evenly;
-    gap: 20px;
-
-    .firstqoute {
-        flex-grow: 1;
-        // border: gold solid;
-        // width: 50%;
-        //border: solid red;
-        @include gridCenter();
-        .qouteP {
-            max-width: 340px;
-            font-size: 50px;
-            font-family: "Alegreya SC", serif;
-            text-align: center;
-            // color: rgb(20, 60, 20);
-            // color: $qoutecolor01;
-            color: white;
-        }
-    }
-
-    .joinbtn-div {
-        .joinbtn {
-            font-size: 30px;
-        }
-    }
-}
-
-@media screen and(max-width:1150px) {
-    .qoutesDiv {
-        display: grid;
-        place-items: center;
-        justify-content: center;
-        // border: solid;
-
-        .firstqoute {
-            width: 100%;
-        }
-    }
-}
 
 @media screen and(max-width:900px) {
     .MainHeader {
@@ -281,60 +232,15 @@ $qoutecolor01: black;
         }
     }
 
-    .qoutesDiv {
-        // border: solid;
-        padding-inline: 20px;
-        @include gridCenter();
-        justify-content: center;
-
-        .firstqoute {
-            // border: solid;
-            width: 100%;
-            max-width: unset;
-            // margin-inline: auto;
-            .qouteP {
-                font-size: 50px;
-            }
-        }
-        .joinbtn-div {
-            .joinbtn {
-                font-size: 30px;
-            }
-        }
-    }
+    
 }
 
-@media screen and(max-width:500px) {
-    .qoutesDiv {
-        padding-inline: 4px;
 
-        .firstqoute {
-            .qouteP {
-                font-size: 46px;
-            }
-        }
-        .joinbtn-div {
-            .joinbtn {
-                font-size: 30px;
-            }
-        }
-    }
-}
 
 @media screen and(max-width:350px) {
     .MainHeader {
         h1 {
             min-width: unset;
-        }
-    }
-
-    .qoutesDiv {
-        padding-inline: 2px;
-
-        .firstqoute {
-            .qouteP {
-                font-size: 40px;
-            }
         }
     }
 }

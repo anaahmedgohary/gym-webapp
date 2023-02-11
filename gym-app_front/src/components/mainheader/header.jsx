@@ -63,7 +63,9 @@ export default function MainHeader()
                                 setModalVisible(!modalVisible)
                             }}
                         >
-                            <i className="fa-solid fa-bars fa-2x"></i>
+                            {/* <i class="fa-regular fa-circle-xmark"></i> */}
+                            {/* <i className="fa-solid fa-bars fa-2x"></i> */}
+                            <i className={`${modalVisible ? "fa-regular fa-circle-xmark fa-2x" : "fa-solid fa-bars fa-2x"}`}></i>
                         </button>
                     </div>
                 </div>

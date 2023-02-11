@@ -10,5 +10,5 @@ import img09 from "/homeimages/machine10.jpg";
 import img010 from "/public/homeimages/qqqqqww.jpg"
 
 
-const images = [img01, img02, img03, img04, img05, img06, img07, img08, img09, img010];
+const images = [img01, img02, img03, img04, img05, img06, img07, img08, img09];
 export default images
