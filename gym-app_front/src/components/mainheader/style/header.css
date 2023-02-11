@@ -115,6 +115,10 @@
   color: rgb(180, 40, 40);
 }
 
+.starthidden {
+  left: 100%;
+}
+
 .faderBlck {
   -webkit-animation: fadeBlack 600ms ease-in-out 0ms 1 alternate forwards;
           animation: fadeBlack 600ms ease-in-out 0ms 1 alternate forwards;

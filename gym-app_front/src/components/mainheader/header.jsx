@@ -11,16 +11,20 @@ export default function MainHeader()
 
 
     const [modalVisible, setModalVisible] = useState(false);
-    // useEffect(() =>
-    // {
-    //     if (modalVisible)
-    //     {
-    //         document.querySelector("#mainBarMenu").style.display = 'flex'
-    //     } else
-    //     {
-    //         document.querySelector("#mainBarMenu").style.display = 'none'
-    //     }
-    // }, [modalVisible])
+    useEffect(() =>
+    {
+        let barMenuClass = document.querySelector("#mainBarMenu").classList;
+        if (modalVisible)
+        {
+            barMenuClass.remove("starthidden")
+            barMenuClass.remove("faderout")
+            barMenuClass.add("faderBlck");
+        } else
+        {
+            barMenuClass.remove("faderBlck")
+            barMenuClass.add("faderout")
+        }
+    }, [modalVisible])
 
     return (
         <div>
@@ -71,8 +75,7 @@ export default function MainHeader()
                 </div>
             </div>
 
-            <div id='mainBarMenu' /* style={{ display: "none" }} */
-                className={`BarMenuDiv ${modalVisible ? "faderBlck" : " faderout"}`}
+            <div id='mainBarMenu' className={`BarMenuDiv starthidden`}
                 onClick={(e) =>
                 {
                     if (e.target == document.querySelector("#mainBarMenu"))

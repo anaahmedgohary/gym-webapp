@@ -153,6 +153,9 @@ $qoutecolor01: black;
     }
 }
 
+.starthidden{
+    left: 100%;
+}
 .faderBlck {
     animation: fadeBlack 600ms ease-in-out 0ms 1 alternate forwards;
 }
@@ -170,6 +173,9 @@ $qoutecolor01: black;
     }
 }
 @keyframes fadeOut {
+    // 0%{
+    //     left: 0%;
+    // }
     100% {
         left: 100%;
         background-color: transparent;

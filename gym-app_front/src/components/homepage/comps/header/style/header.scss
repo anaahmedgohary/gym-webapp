@@ -36,9 +36,9 @@ $qoutecolor01: black;
     min-height: 100vh;
     border: solid rgb(0, 0, 40);
     //background-color: rgba(250, 250, 250, 0.8);
-    background-color: rgba(0, 40, 10, 0.5);
+    background-color: rgba(0, 40, 10, 1);
     background-blend-mode: multiply;
-    background-blend-mode: overlay;
+    // background-blend-mode: overlay;
     color: white;
 
    overflow: hidden;
@@ -67,6 +67,7 @@ $qoutecolor01: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     // gap: 60px;
     overflow: hidden;
     
