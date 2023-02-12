@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+// const cors = require("cors")
 const path = require("path");
 const https = require('https');
 const http = require('http');
@@ -14,6 +15,7 @@ const http = require('http');
 
 
 const app = express();
+// app.use(cors());
 const PORT = process.env.port || 4000;
 app
     .use(express.json())
@@ -28,12 +30,18 @@ app.get("/api", (req, res) =>
 app.get("/api/login", (req, res) =>
 {
     // res.json({ "logiunn": "done" })
-    res.redirect("https://gymwebapp1.vercel.app/login")
+    res.redirect("https://gymwebapp1.vercel.app/login");
 });
 
 app.get("/api/loginnn", (req, res) =>
 {
     res.json({ "logiunn": "done" })
+    // res.redirect("https://gymwebapp1.vercel.app/login")
+});
+
+app.post("/api/loginnn", (req, res) =>
+{
+    res.json({ "Post": "works" })
     // res.redirect("https://gymwebapp1.vercel.app/login")
 });
 

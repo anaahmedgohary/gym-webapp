@@ -14,7 +14,7 @@ import "./style/signin.css";
 
 
 // let baseURL = import.meta.env.VITE_BASE_URL || process.env.VITE_BASE_URL;
-let baseURL = "/api"
+const baseURL = import.meta.env.VITE_LOCAL_BASE_URL || "/api";
 //console.log(baseURL)
 
 export default function LogIn(props)
@@ -23,7 +23,7 @@ export default function LogIn(props)
     {
         axios(`${baseURL}/loginnn`, {
             method: 'GET',
-            withCredentials: true
+            // withCredentials: true
         })
             .then(response =>
             {
@@ -36,6 +36,21 @@ export default function LogIn(props)
                 {
                     console.log(response.data)
                 }
+            }).catch(e =>
+            {
+                console.log(e);
+            })
+    }, [])
+    useEffect(() =>
+    {
+        axios(`${baseURL}/loginnn`, {
+            method: 'POST',
+            // withCredentials: true
+        })
+            .then(response =>
+            {
+                console.log(response.data)
+
             }).catch(e =>
             {
                 console.log(e);
